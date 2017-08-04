@@ -8,3 +8,8 @@ C:\Users\kermit\OneDrive - Atea\KermIT\Code\Atea.Activities\2017.06.03.1015\Atea
 C:\Users\kermit\OneDrive - Atea\KermIT\Code\Atea.Activities\2017.06.03.1015\Atea.Activities\obj\Debug\AteaActivities.csprojResolveAssemblyReference.cache
 C:\Users\kermit\OneDrive - Atea\KermIT\Code\Atea.Activities\2017.06.03.1015\Atea.Activities\obj\Debug\AteaHTTP.dll
 C:\Users\kermit\OneDrive - Atea\KermIT\Code\Atea.Activities\2017.06.03.1015\Atea.Activities\obj\Debug\AteaHTTP.pdb
+C:\Projects\GitHub\Packages\Code\Atea.Activities\Atea.Activities\bin\Debug\AteaHTTP.dll
+C:\Projects\GitHub\Packages\Code\Atea.Activities\Atea.Activities\bin\Debug\AteaHTTP.pdb
+C:\Projects\GitHub\Packages\Code\Atea.Activities\Atea.Activities\obj\Debug\AteaActivities.csprojResolveAssemblyReference.cache
+C:\Projects\GitHub\Packages\Code\Atea.Activities\Atea.Activities\obj\Debug\AteaHTTP.dll
+C:\Projects\GitHub\Packages\Code\Atea.Activities\Atea.Activities\obj\Debug\AteaHTTP.pdb

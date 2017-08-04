@@ -64,9 +64,11 @@ namespace Atea
             public InArgument<string> Part { get; set; }
 
             [Category("Input")]
+            [RequiredArgument]
             public InArgument<string> CustomerID { get; set; }
 
             [Category("Input")]
+            [RequiredArgument]
             public InArgument<string> URL { get; set; }
 
             [Category("Output")]
@@ -76,39 +78,48 @@ namespace Atea
             {
                 string part = Part.Get(context);
                 string customerid = CustomerID.Get(context);
-                string url3 = URL.Get(context);
-                string sendXML3 = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><ProductPriceRequest xmlns=\"http://Atea.ESHOP.FreeChoice.Web.Service\"><productId>" + part + "</productId><customerId>" + customerid + "</customerId></ProductPriceRequest>";
+                string url = URL.Get(context);
 
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url3);
-
-                byte[] bytes;
-                bytes = System.Text.Encoding.ASCII.GetBytes(sendXML3);
-
-                request.ContentType = "text/xml; encoding='utf-8'";
-                request.ContentLength = bytes.Length;
-                request.Method = "POST";
-
-                Stream requestStream = request.GetRequestStream();
-                requestStream.Write(bytes, 0, bytes.Length);
-                requestStream.Close();
-
-                HttpWebResponse response;
                 try
                 {
-                    response = (HttpWebResponse)request.GetResponse();
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
+                    request.Method = "POST";
+                    request.ContentType = "text/xml";
+
+                    string SOAPReqBody = String.Format(@"<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:web=""http://web.pricecatalog.ws.io.etailer.netset.se/"">
+                                                       <soapenv:Header/>
+                                                       <soapenv:Body>
+                                                          <web:GetCatalogSingleProductPricesRequest>
+                                                             <CustomerID>{0}</CustomerID>
+                                                             <ProductID productnumbertype=""EXTERNALID"">{1}</ProductID>
+                                                          </web:GetCatalogSingleProductPricesRequest>
+                                                       </soapenv:Body>
+                                                     </soapenv:Envelope>", customerid, part);
+
+                    byte[] bytes = Encoding.UTF8.GetBytes(SOAPReqBody);
+                    request.ContentLength = bytes.Length;
+
+                    using (Stream putStream = request.GetRequestStream())
+                    {
+                        putStream.Write(bytes, 0, bytes.Length);
+                    }
+
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
                     if (response.StatusCode == HttpStatusCode.OK)
                     {
-                        Stream responseStream = response.GetResponseStream();
-                        string responseStr = new StreamReader(responseStream).ReadToEnd();
-                        responseStr = System.Text.RegularExpressions.Regex.Match(responseStr, @"<price>[0-9.,]+").Value.Replace("<price>", "").Trim();
-
-                        Price.Set(context, responseStr);
+                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                        {
+                            string servireResult = reader.ReadToEnd();
+                            Price.Set(context, System.Text.RegularExpressions.Regex.Match(servireResult, @"<Price>[0-9.,]+").Value.Replace("<Price>", "").Trim());
+                        }
                     }
-                    else { Price.Set(context, "Operation failed with the response: " + response.StatusCode); }
+                    else
+                        throw new Exception("Operation failed with the response: " + response.StatusCode);
                 }
                 catch (Exception e)
                 {
-                    Price.Set(context, "Operation failed with the response: " + e.Message);
+                    Price.Set(context, $"While getting price from web service: {e.Message}");
                 }
             }
         }
