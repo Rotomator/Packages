@@ -1,0 +1,5 @@
+c:\users\kermit-r01\documents\visual studio 2015\Projects\AteaDatatableActivities\AteaDatatableActivities\bin\Debug\AteaDatatableActivities.dll
+c:\users\kermit-r01\documents\visual studio 2015\Projects\AteaDatatableActivities\AteaDatatableActivities\bin\Debug\AteaDatatableActivities.pdb
+c:\users\kermit-r01\documents\visual studio 2015\Projects\AteaDatatableActivities\AteaDatatableActivities\obj\Debug\AteaDatatableActivities.csprojResolveAssemblyReference.cache
+c:\users\kermit-r01\documents\visual studio 2015\Projects\AteaDatatableActivities\AteaDatatableActivities\obj\Debug\AteaDatatableActivities.dll
+c:\users\kermit-r01\documents\visual studio 2015\Projects\AteaDatatableActivities\AteaDatatableActivities\obj\Debug\AteaDatatableActivities.pdb

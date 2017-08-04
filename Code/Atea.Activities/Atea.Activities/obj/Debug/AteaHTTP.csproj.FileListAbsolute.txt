@@ -1,0 +1,5 @@
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\bin\Debug\AteaHTTP.dll
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\bin\Debug\AteaHTTP.pdb
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\obj\Debug\AteaHTTP.csprojResolveAssemblyReference.cache
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\obj\Debug\AteaHTTP.dll
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\obj\Debug\AteaHTTP.pdb

@@ -1,0 +1,10 @@
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\bin\Debug\AteaHTTP.dll
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\bin\Debug\AteaHTTP.pdb
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\obj\Debug\AteaActivities.csprojResolveAssemblyReference.cache
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\obj\Debug\AteaHTTP.dll
+C:\Users\KERMIT\Desktop\AteaHTTP\AteaHTTP\obj\Debug\AteaHTTP.pdb
+C:\Users\kermit\OneDrive - Atea\KermIT\Code\Atea.Activities\2017.06.03.1015\Atea.Activities\bin\Debug\AteaHTTP.dll
+C:\Users\kermit\OneDrive - Atea\KermIT\Code\Atea.Activities\2017.06.03.1015\Atea.Activities\bin\Debug\AteaHTTP.pdb
+C:\Users\kermit\OneDrive - Atea\KermIT\Code\Atea.Activities\2017.06.03.1015\Atea.Activities\obj\Debug\AteaActivities.csprojResolveAssemblyReference.cache
+C:\Users\kermit\OneDrive - Atea\KermIT\Code\Atea.Activities\2017.06.03.1015\Atea.Activities\obj\Debug\AteaHTTP.dll
+C:\Users\kermit\OneDrive - Atea\KermIT\Code\Atea.Activities\2017.06.03.1015\Atea.Activities\obj\Debug\AteaHTTP.pdb
